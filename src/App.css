@@ -1,0 +1,314 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+/* Layout */
+.swiper-button-next, .swiper-rtl .swiper-button-prev, .swiper-button-prev, .swiper-rtl .swiper-button-next{
+  display: none !important; 
+}
+.last, .next{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--main);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.arrow-last, .arrow-next{
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  border: 2px solid var(--dark);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.next,.arrow-last{
+  transform: rotate(-180deg);
+}
+.last:hover, .next:hover{
+  border: 2px solid var(--dark);
+}
+.last:hover svg path, .next:hover svg path, .arrow-last:hover svg path, .arrow-next:hover svg path{
+  fill: var(--dark);
+}
+.arrow-last:hover, .arrow-next:hover{
+  border: 2px solid var(--dark);
+  background-color: var(--light);
+}
+
+.last:hover.disable-arrow, .next:hover.disable-arrow, .arrow-last:hover.disable-arrow, .arrow-next:hover.disable-arrow{
+  border: 2px solid rgb(156, 156, 156);
+  background-color: rgb(156, 156, 156);
+}
+.last:hover.disable-arrow svg path, .next:hover.disable-arrow svg path, .arrow-last:hover.disable-arrow svg path, .arrow-next:hover.disable-arrow svg path{
+  fill: var(--light);
+}
+.disable-arrow{
+  background-color: rgb(156, 156, 156);
+  border: 2px solid rgb(156, 156, 156);
+  transition: 0.3s;
+  cursor: unset;
+}
+.disable-arrow svg path{
+  fill: var(--light);
+  transition: 0.3s;
+}
+button{
+  background-color: var(--dark);
+  border-radius: 8px;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--light);
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+button:hover{
+  background-color: var(--main);
+}
+/* Heading */
+.heading h2{
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading p{
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+.heading span{
+  color: var(--main);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: var(--font-size-s);
+}
+/* Hero */
+.hero{
+  background: url("./assets//images/chess.jpg");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1{
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4.2rem;
+
+}
+.hero h2{
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  color: var(--main);
+}
+.blurry{
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(2px);
+
+}
+.content-hero{
+  width: 50%;
+}
+/* Navbar */
+nav{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+nav svg.logo{
+    width: 241px;
+    height: 231px
+}
+nav.scroll{
+  background-color: var(--light);
+}
+nav.scroll svg.logo{
+  animation: resizeToBig 0.3s forwards;
+}
+@keyframes resizeToBig {
+  from {
+    width: 241px;
+    height: 231px
+  }
+  to {
+    width: 111px;
+    height: 101px
+  }
+  
+}
+nav.scroll-remove svg.logo{
+  animation: resizeToSmall 0.3s forwards;
+}
+@keyframes resizeToSmall {
+  from {
+    width: 111px;
+    height: 101px
+  }
+  to {
+    width: 241px;
+    height: 231px
+  }
+  
+}
+nav svg{
+  height: 190px;
+}
+nav .menu-button{
+  background: rgba(177, 171, 171, 0.259);
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Services */
+#services{
+  position: relative;
+  margin-top: -150px;
+}
+.card-hero{
+  border: 1px solid var(--main);
+  border-radius: 20px;
+  background-color: var(--light);
+  min-height: 200px;
+
+}
+.card-hero h2{
+  font-size: var(--font-size-s);
+  font-weight: 600;
+}
+.card-hero p{
+  font-size: var(--font-size-xxs);
+}
+/* Metrics */
+.metrics{
+  background: url("./assets/images/banner-1.png");
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-metrics{
+  background-color: var(--dark);
+  border-radius: 10px;
+  color: var(--light);
+  height: 200px;
+}
+.card-metrics .content-metrics{
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+}
+/* About */
+#about{
+  background: url("./assets/images/banner-2.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-about{
+  position: relative;
+  overflow: hidden;
+}
+.num-choose img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+}
+.num-choose span{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.dark-card{
+  background-color: var(--dark);
+  color: var(--light);
+  border: 1px solid var(--light)
+}
+
+/* Highlights */
+.first-line{
+    background: url("./assets/images/banner-3.png");
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#highlights .card-hero{
+  border: unset;
+  overflow: hidden;
+  text-align: center;
+}
+#highlights .card-hero h2{
+  height: 55px;
+}
+.icon-container{
+  background: url("./assets/images/shape-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Footer */
+.line{
+    height: 2px;
+    background-color: var(--main);
+    opacity: 0.6;
+}
+.icon-social{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-social:hover::after{
+    display: flex;
+}
+.icon-social:hover path{
+    fill: var(--main);
+}
+
+/* Drawing border */
+.icon-social::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--main, red);
+  box-sizing: border-box;
+  border-radius: 8px;
+  clipPath: inset(0 100% 100% 0); /* initially hidden */
+  display: none;
+  animation: drawBorder 0.7s linear forwards;
+}
+
+.icon-social:hover::before {
+  display: block;
+}
+
+
+/* border drawing animation */
+@keyframes drawBorder {
+  0%   { clipPath: inset(0 100% 100% 0); }
+  25%  { clipPath: inset(0 0 100% 0); }
+  50%  { clipPath: inset(0 0 0 0); }
+  100% { clipPath: inset(0 0 0 0); }
+}
