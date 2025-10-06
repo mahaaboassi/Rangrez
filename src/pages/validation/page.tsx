@@ -10,7 +10,7 @@ const Validation = () => {
     window.scrollTo({top:0, behavior:"smooth"});
   },[])
   return <div className="flex flex-col gap-5 md:gap-10">
-    <div className="hero-subpage flex items-center justify-center  ">
+    <div className="hero-subpage flex items-center justify-center overflow-hidden ">
       <motion.div
         className="content-hero flex flex-col gap-4 text-center"
         initial={{ opacity: 0, y: 40 }}
