@@ -128,7 +128,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="card-hero justify-center p-4 flex flex-col gap-1"
+              className="card-hero card-services justify-center p-4 flex flex-col gap-1 h-[200px]"
             >
               <div>{e.icon}</div>
               <h2>{e.name}</h2>

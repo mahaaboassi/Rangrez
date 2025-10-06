@@ -42,7 +42,7 @@ const Values = () => {
             key={`Values_${e.title}_${idx}`}
             initial={{ opacity: 0, x: 50 }} // start from right
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay:1+ idx * 0.2 }}
+            transition={{ duration: 0.6, delay: idx * 0.2 }}
             className="card-hero card-about dark-card p-5 pr-20 flex flex-col justify-center gap-2"
           >
             <div className="num-choose">
