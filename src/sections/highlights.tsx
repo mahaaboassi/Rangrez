@@ -21,7 +21,7 @@ const Highlights = () => {
             <Heading title="HIGHLIGHTS" desc="" />
             <NavigationSlider lastStep={lastSlider} nextStep={nextSlider} isLastAvailable={isActiveLast} isNextAvailable={isActiveNext} /> 
         </div>
-        <div className="relative -mt-20 px-20">
+        <div className="relative -mt-20 container-page">
             <Swiper
                 modules={[Navigation]}
                 navigation

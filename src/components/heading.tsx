@@ -9,7 +9,7 @@ type HeadingProps = {
 
 
 const Heading: React.FC<HeadingProps> = ({title,desc,label,isWithButton})=>{
-    return(<div className="heading flex flex-col gap-3">
+    return(<div className="heading flex flex-col gap-2 md:gap-3">
         <h2>{title}</h2>
         <p>{desc}</p>
         {isWithButton && <span>{label}</span> }
