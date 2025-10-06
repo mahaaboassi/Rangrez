@@ -32,7 +32,14 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <button className="btn-hero ">
+          <button onClick={()=>{
+                const element = document.querySelector("#contact");
+                if (element) {
+                    const yOffset = -150; 
+                    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({ top: y, behavior: "smooth", });
+                }
+          }} className="btn-hero ">
             Get Starting
           </button>
         </motion.div>

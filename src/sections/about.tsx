@@ -38,7 +38,7 @@ const About = () => {
     <div
       id="about"
       ref={ref}
-      className="container-page !py-10 items-center flex flex-col gap-10"
+      className="container-page overflow-hidden !py-10 items-center flex flex-col gap-10"
     >
       <div className="text-center">
         <Heading

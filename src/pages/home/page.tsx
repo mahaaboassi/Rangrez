@@ -9,6 +9,7 @@ import Metrics from "../../sections/metrics";
 import Services from "../../sections/services";
 import Values from "../../sections/values";
 import { useEffect } from "react";
+import Contact from "../../sections/contact";
 
 const Home = () => {
   const location = useLocation();
@@ -44,6 +45,7 @@ const Home = () => {
         <ESG/>
       </div>
       <Highlights/>
+      <Contact/>
     </div>
 ;
 }      

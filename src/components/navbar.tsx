@@ -39,6 +39,7 @@ const Navbar = () => {
 
     if (location.pathname !== "/") {
       navigate("/", { state: { scrollTo: id } });
+
     } else {
       scrollToSection(id);
     }

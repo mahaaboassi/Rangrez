@@ -37,7 +37,7 @@ const icons: IconItem[] = [{
 }]
 
 const Footer = () =>{
-    return(<footer className="container-layout my-10  flex flex-col gap-2">
+    return(<footer className="container-page my-10  flex flex-col gap-2">
 
         {/* <div className="px-10"> */}
             <div className="line"></div>
