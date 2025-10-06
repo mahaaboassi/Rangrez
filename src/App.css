@@ -6,6 +6,21 @@
 .container-page{
   padding: 0 4rem;
 }
+.menu-button{
+  left: 4rem;
+}
+.menu-side{
+  background: var(--dark);
+  color: var(--light);
+}
+.menu-side h1{
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  color: var(--main);
+}
+.menu-side hr{
+  opacity: 0.5;
+}
 .swiper-button-next, .swiper-rtl .swiper-button-prev, .swiper-button-prev, .swiper-rtl .swiper-button-next{
   display: none !important; 
 }
@@ -95,7 +110,7 @@ button:hover{
 }
 /* Hero */
 .hero{
-  background: url("./assets//images/chess.jpg");
+  background: url("./assets/images/chess_3.png");
   height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,22 +119,36 @@ button:hover{
   align-items: center;
   text-align: center;
 }
-.hero h1{
+.content-hero h1{
   font-size: 4rem;
   font-weight: 800;
   line-height: 4.2rem;
 
 }
-.hero h2{
+.content-hero h1 span{
+  color: var(--main);
+}
+.content-hero h2{
   font-size: var(--font-size-l);
   font-weight: 600;
-  color: var(--main);
+  /* color: var(--main); */
 }
 .blurry{
   background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(2px);
 
 }
+.hero-subpage{
+  background: url("./assets/images/terms.png");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .content-hero{
   width: 50%;
 }
@@ -135,7 +164,16 @@ nav svg.logo{
     height: 231px
 }
 nav.scroll{
-  background-color: var(--light);
+  animation: changeBgColor 0.3s forwards;
+}
+@keyframes changeBgColor {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 nav.scroll svg.logo{
   animation: resizeToBig 0.3s forwards;
@@ -165,9 +203,7 @@ nav.scroll-remove svg.logo{
   }
   
 }
-nav svg{
-  height: 190px;
-}
+
 nav .menu-button{
   background: rgba(177, 171, 171, 0.259);
   backdrop-filter: blur(2px);
@@ -191,12 +227,21 @@ nav .menu-button{
   min-height: 200px;
 
 }
+.card-hero h3{
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--main);
+}
 .card-hero h2{
   font-size: var(--font-size-s);
   font-weight: 600;
 }
-.card-hero p{
+.card-hero p, .card-hero ul{
   font-size: var(--font-size-xxs);
+  line-height: 1.1rem;
+}
+.dark-card p, .dark-card ul{
+  color: rgb(222, 222, 222);
 }
 /* Metrics */
 .metrics{
@@ -315,17 +360,44 @@ nav .menu-button{
   50%  { clipPath: inset(0 0 0 0); }
   100% { clipPath: inset(0 0 0 0); }
 }
+/* Content Pages */
+.content-page p {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
 
 @media (max-width:1200px) {
   nav svg.logo{
-    width: 191px;
-    height: 181px
+    width: 131px;
+    height: 121px
   }
-  .hero h1{
+  @keyframes resizeToBig {
+    from {
+      width: 131px;
+      height: 121px
+    }
+    to {
+      width: 111px;
+      height: 101px
+    }
+    
+  }
+  @keyframes resizeToSmall {
+    from {
+      width: 111px;
+      height: 101px
+    }
+    to {
+       width: 131px;
+      height: 121px
+    }
+    
+  }
+  .content-hero h1{
     font-size: 3rem;
     line-height: 3.2rem;
   }
-  .hero h2{
+  .content-hero h2{
     font-size: var(--font-size-s);
   }
   .content-hero{
@@ -340,14 +412,48 @@ nav .menu-button{
   .card-metrics p{
     font-size: var(--font-size-xxs);
   }
+  .card-hero p{
+    line-height: 1rem;
+  }
+  .card-hero{
+    min-height: 160px;
+  }
+  .card-about{
+    padding-right: 32px !important;
+  }
+  .card-about svg{
+    height: 30px;
+  }
+  .num-choose img {
+    width: 100px;
+    height: 100px;
+    top: -3px;
+    right: -3px;
+  }
+  .num-choose span {
+    position: absolute;
+    right: 3px;
+    top: 12px;
+  }
+
 }
 @media (max-width:900px) {
-  .hero h1{
+  .hero{
+    background: url("./assets/images/chees_2.png");
+    height: 600px;
+  }
+  .hero-subpage{
+    height: 400px;
+  }
+  .content-hero h1{
     font-size: 2.8rem;
     line-height: 3rem;
   }
   .container-page{
     padding: 0 3rem;
+  }
+  .menu-button{
+    left: 3rem;
   }
   .heading h2{
     font-size: 1.5rem;
@@ -362,7 +468,7 @@ nav .menu-button{
 
 }
 @media (max-width:768px) {
-  .hero h1{
+  .content-hero h1{
     font-size: 2.4rem;
     line-height: 2.8rem;
   }
@@ -376,44 +482,91 @@ nav .menu-button{
     font-size: var(--font-size-xxs);
   }
 
+  
 }
 @media (max-width:600px) {
-  nav svg.logo{
-    width: 141px;
-    height: 131px
-  }
   .hero{
-   height: 600px;
+   height: 550px;
   }
   .content-hero{
     width: 80%;
   }
+  
 
 
 }
 @media (max-width:500px) {
+  .hero{
+    background: url("./assets/images/chess_4.png");
+    height: 500px;
+    background-repeat: no-repeat;
+  }
+
   .container-page{
     padding: 0 2rem;
   }
-  nav svg.logo{
-    width: 141px;
-    height: 131px
+  .menu-button{
+    left: 2rem;
   }
-  .hero h1{
+  nav svg.logo{
+    width: 99px;
+    height: 89px
+  }
+  @keyframes resizeToBig {
+    from {
+       width: 89px;
+      height: 79px
+    }
+    to {
+       width: 99px;
+      height: 89px
+    }
+    
+  }
+  @keyframes resizeToSmall {
+    from {
+      width: 99px;
+      height: 89px
+    }
+    to {
+      width: 89px;
+      height: 79px
+    }
+    
+  }
+  .content-hero h1{
     font-size: 2rem;
     line-height: 2.2rem;
   }
-  .hero h2{
+  .content-hero h2{
     font-size: var(--font-size-xs);
   }
+
+
 
 }
 @media (max-width:450px) {
   .container-page{
     padding: 0 1rem;
   }
-  .hero h1{
+  .menu-button{
+    left: 1rem;
+  }
+  .content-hero h1{
     font-size: 1.8rem;
     line-height: 2rem;
   }
+  button{
+    font-size: var(--font-size-xs);
+  }
+
+ 
+}
+@media (max-width:400px) {
+
+  .content-hero h1{
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+
 }

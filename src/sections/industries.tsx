@@ -16,7 +16,7 @@ const Insdustries = () => {
     const [isActiveNext, setIsActiveNext ] = useState<boolean>(true)
     const [isActiveLast, setIsActiveLast ] = useState<boolean>(false)
 
-    return ( <div id="industries" className='flex flex-col gap-10'>
+    return ( <div id="industries" className='flex flex-col gap-2 md:gap-5'>
         <Heading title="INDUSTRIES" desc="The Rangrez Network (TRN) delivers industry-specific growth strategies across technology, education, healthcare, hospitality, real estate, manufacturing, retail, and entertainment, empowering businesses to innovate, scale, and thrive through digital-first solutions, operational excellence, and market-driven transformation."/>
         <div className='flex justify-end items-center'>
             <div className='flex gap-3'>
