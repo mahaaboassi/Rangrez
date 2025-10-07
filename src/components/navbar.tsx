@@ -127,20 +127,28 @@ const Navbar = () => {
               </div>
             </div>
 
-            <h1>TRN Corporation</h1>
-            <hr />
-            <ul className="flex flex-col gap-4 text-lg font-semibold">
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#about")}>About</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#services")}>Services</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#industries")}>Industries</li>
-              <li onClick={()=>setMenuOpen(false)} >
-                <Link to="/validation" >Validation</Link>
-              </li>
-              <li onClick={()=>setMenuOpen(false)}>
-                <Link to="/terms-and-conditions" >Terms And Conditions</Link>
-              </li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#contact")}>Contact</li>
-            </ul>
+            {/* <h1>TRN Corporation</h1> */}
+            
+            <div className=" h-full relative">
+              <ul className="flex flex-col gap-4 text-lg font-semibold">
+                <li className="cursor-pointer" onClick={() => handleScrollTo("#about")}>About</li>
+                <li className="cursor-pointer" onClick={() => handleScrollTo("#services")}>Services</li>
+                <li className="cursor-pointer" onClick={() => handleScrollTo("#industries")}>Industries</li>
+                <li className="cursor-pointer" onClick={() => handleScrollTo("#contact")}>Contact</li>
+              </ul>
+              
+              <div className="absolute bottom-6 flex flex-col gap-4 w-full">
+                  <hr />
+                  <div className="flex gag-4 justify-between">
+                      <div className="final-links" onClick={()=>setMenuOpen(false)} >
+                        <Link to="/validation" >Validation</Link>
+                      </div>
+                      <div className="final-links" onClick={()=>setMenuOpen(false)}>
+                        <Link to="/terms-and-conditions" >Terms </Link>
+                      </div>
+                  </div>
+                </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

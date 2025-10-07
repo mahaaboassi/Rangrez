@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Heading from "../components/heading"
 import NavigationSlider from "../components/navigationSlider";
 import { highlightsData } from "../data";
@@ -14,16 +13,14 @@ const Highlights = () => {
         const btn = document.querySelector("#highlights .swiper-button-next") as HTMLElement | null;
         btn?.click();
     }
-    const [isActiveNext, setIsActiveNext ] = useState<boolean>(true)
-    const [isActiveLast, setIsActiveLast ] = useState<boolean>(false)
     return(<div id="highlights"  >
-        <div className="first-line text-center pt-20">
+        <div className="first-line text-center flex flex-col items-center pt-20">
             <Heading title="HIGHLIGHTS" desc="" />
-            <NavigationSlider lastStep={lastSlider} nextStep={nextSlider} isLastAvailable={isActiveLast} isNextAvailable={isActiveNext} /> 
+            <NavigationSlider lastStep={lastSlider} nextStep={nextSlider}  /> 
         </div>
         <div className="relative -mt-20 container-page">
             <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation
                 autoplay={{
                     delay: 3000,       
@@ -45,20 +42,14 @@ const Highlights = () => {
                     slidesPerView: 4,
                     
                     },
-                }}
-                onSlideChange={(swiper) => {
-                    if(swiper.activeIndex == 0) {setIsActiveLast(false)}else{setIsActiveLast(true)}
-                    const slidePerView = swiper.params.slidesPerView as number;
-                    const totalSteps  = highlightsData.length - slidePerView
-                    if(swiper.activeIndex == totalSteps) {setIsActiveNext(false)}else{setIsActiveNext(true)}
-                }}  
+                }} 
                 >   
                 {highlightsData.map((e,idx)=>(<SwiperSlide key={`Services_${e.title}_${idx}`}>
-                    <div className="card-hero mb-3 shadow justify-center flex flex-col gap-1" >
-                        <div className="icon-container flex justify-end p-5">
+                    <div className="card-hero mb-3 shadow flex flex-col gap-1" >
+                        <div className="icon-container flex justify-center p-5">
                             <div>{e.icon}</div>
                         </div>
-                        <div className="p-3">
+                        <div className="p-3 text-start">
                             <h2>{e.title}</h2>
                             <p>{e.description}</p>
                         </div>

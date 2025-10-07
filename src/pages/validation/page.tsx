@@ -48,7 +48,7 @@ const Validation = () => {
               initial={{ opacity: 0, x: 50 }} // start from right
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="card-hero card-about dark-card px-5 py-10 md:!p-12 pr-20 flex flex-col justify-center gap-2"
+              className="card-hero card-about px-5 py-10 md:!p-12 pr-24 flex flex-col justify-center gap-2"
             >
               <div className="num-choose">
                 <img src={shape} alt="Shape" />

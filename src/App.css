@@ -86,7 +86,6 @@ button{
   color: var(--light);
   padding: 10px 20px;
   cursor: pointer;
-  text-transform: uppercase;
   transition: 0.3s;
 }
 button:hover{
@@ -110,13 +109,12 @@ button:hover{
 }
 /* Hero */
 .hero{
-  background: url("./assets/images/chess_3.png");
-  height: 700px;
+  background: url("./assets/images/new_1.png");
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 .content-hero h1{
@@ -126,12 +124,12 @@ button:hover{
 
 }
 .content-hero h1 span{
-  color: var(--main);
+  /* color: var(--main); */
 }
 .content-hero h2{
   font-size: var(--font-size-l);
   font-weight: 600;
-  /* color: var(--main); */
+  color: var(--main);
 }
 .blurry{
   background: rgba(255, 255, 255, 0.10);
@@ -214,11 +212,17 @@ nav .menu-button{
   justify-content: center;
   align-items: center;
 }
-
+.final-links{
+  font-size: var(--font-size-xs);
+  transition: 0.4s;
+}
+.final-links:hover{
+  text-decoration: underline;
+}
 /* Services */
 #services{
   position: relative;
-  margin-top: -150px; 
+  margin-top: -250px; 
   /* margin-bottom: -150px; */
 }
 .card-hero{
@@ -239,14 +243,18 @@ nav .menu-button{
 }
 .card-hero p, .card-hero ul{
   font-size: var(--font-size-xxs);
-  line-height: 1.1rem;
+  line-height: 1.3rem;
+}
+.dark-card{
+  border-top: 5px solid var(--main) !important;
 }
 .dark-card p, .dark-card ul{
   color: rgb(222, 222, 222);
+  
 }
 /* Metrics */
 .metrics{
-  background: url("./assets/images/banner-1.png");
+  background: url("./assets/images/banner-metrics-2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -254,11 +262,11 @@ nav .menu-button{
   background-color: var(--dark);
   border-radius: 10px;
   color: var(--light);
-  height: 200px;
+  height: 100px;
 }
 
 .card-metrics .content-metrics{
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-weight: 700;
 }
 /* About */
@@ -306,9 +314,10 @@ nav .menu-button{
   height: 55px;
 }
 .icon-container{
-  background: url("./assets/images/shape-2.png");
+  /* background: url("./assets/images/shape-2.png"); */
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: var(--dark);
 }
 
 /* Footer */
@@ -393,11 +402,40 @@ form input, form textarea{
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-.container-contact{
-  background-color: var(--dark);
-  color: var(--light);
-  border-radius: 10px;
-  height: 120px;
+
+  footer p{
+    font-size: var(--font-size-xxs);
+  }
+
+
+/* Contact */
+.container-contact-card{
+  position: relative;
+}
+.container-contact-card form{
+  width: 70%;
+  padding-right: 10rem ;
+}
+.contact-info-card{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 40%;
+  background: url("./assets/images/contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+}
+.value{
+  font-weight: 500;
+  font-size: var(--font-size-xxs);
+  max-width: 80%;
 }
 .icon{
   background-color: var(--main);
@@ -407,6 +445,22 @@ form input, form textarea{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width:1280px) {
+    .content-hero h1{
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+  .content-hero h2{
+    font-size: var(--font-size-s);
+  }
+  .content-hero{
+    width: 60%;
+  }
+  .contact-info-card{
+    width: 42%;
+  }
+  
 }
 @media (max-width:1200px) {
   nav svg.logo{
@@ -435,19 +489,7 @@ form input, form textarea{
     }
     
   }
-  .content-hero h1{
-    font-size: 3rem;
-    line-height: 3.2rem;
-  }
-  .content-hero h2{
-    font-size: var(--font-size-s);
-  }
-  .content-hero{
-    width: 70%;
-  }
-  .card-metrics{
-    height: 150px;
-  }
+
   .card-metrics h2, .card-metrics h3{
     font-size: var(--font-size-xl);
   }
@@ -480,11 +522,26 @@ form input, form textarea{
   .container-contact p{
     font-size: var(--font-size-xs);
   }
+  .contact-info-card{
+    width: 45%;
+  }
+}
+@media (max-width:1000px) {
+  .contact-info-card{
+    position: relative;
+    width: 100%;
+    transform: unset;
+    margin-top: 20px;
+  }
+  .container-contact-card form{
+    width: 100%;
+    padding-right: 16px;
+  }
 }
 @media (max-width:900px) {
   .hero{
     background: url("./assets/images/chees_2.png");
-    height: 600px;
+    /* height: 600px; */
   }
   .hero-subpage{
     height: 400px;
@@ -519,7 +576,7 @@ form input, form textarea{
     line-height: 2.8rem;
   }
   .card-metrics{
-    height: 100px;
+    height: 90px;
   }
   .card-metrics h2, .card-metrics h3{
     font-size: var(--font-size-l);
@@ -532,7 +589,7 @@ form input, form textarea{
 }
 @media (max-width:600px) {
   .hero{
-   height: 550px;
+   /* height: 550px; */
   }
   .content-hero{
     width: 80%;
@@ -541,18 +598,20 @@ form input, form textarea{
   .card-services svg{
     height: 40px;
   }
-
+  .contact-info-card{
+      min-height: unset;
+    }
 }
 @media (min-width: 450px) and (max-width:700px) {
   .card-services{
-    height: 250px;
+    height: 220px;
   }
   
 }
 @media (max-width:500px) {
   .hero{
     background: url("./assets/images/chess_4.png");
-    height: 500px;
+    height: 600px;
     background-repeat: no-repeat;
   }
 
@@ -608,6 +667,9 @@ form input, form textarea{
     background: url("./assets/images/hand.png");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .value{
+    max-width: 100%;
   }
 }
 @media (max-width:450px) {

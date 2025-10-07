@@ -61,7 +61,7 @@ const Metrics: React.FC = () => {
           className="card-metrics w-full xs:w-fit p-4 flex flex-col justify-center items-center text-center gap-1"
         >
           <div className="content-metrics flex gap-1 items-end justify-center">
-            <h2 className="text-4xl sm:text-5xl font-bold ">
+            <h2 className="text-4xl sm:text-4xl font-bold ">
               {isInView ? (
                 <CountUp end={e.number} duration={2.5} />
               ) : (

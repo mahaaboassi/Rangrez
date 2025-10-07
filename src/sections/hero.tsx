@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="hero flex items-center justify-center  ">
+    <div className="hero pt-36 xs:pt-60 md::pt-50">
       <motion.div
         className="content-hero flex flex-col gap-4 text-center"
         initial={{ opacity: 0, y: 40 }}
@@ -19,7 +19,6 @@ const Hero = () => {
         </motion.h1>
 
         <motion.h2
-          className="blurry"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -40,7 +39,7 @@ const Hero = () => {
                     window.scrollTo({ top: y, behavior: "smooth", });
                 }
           }} className="btn-hero ">
-            Get Starting
+            Get Started
           </button>
         </motion.div>
       </motion.div>

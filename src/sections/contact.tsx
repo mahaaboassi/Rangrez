@@ -154,11 +154,10 @@ const Contact = ()=>{
                     <button onClick={reset}>Close</button>
                 </div>
             </div>}
-            <div className="grid grid-cols-3 gap-5 lg:gap-10">
-                <div className="col-span-3 md:col-span-2">
-                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 md:gap-4 p-4 lg:p-8">
+            <div className="container-contact-card">
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-1 md:gap-2 p-4 md:p-8">
                         <Heading title="Contact" desc="Get in touch with The Rangrez Network (TRN)." />
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
                                 <div className="w-full">
                                     <input {...register("name")} className="w-full" placeholder="Name"  />
                                     {errors.name && <p className="p-0.5 text-error">{errors.name.message}</p>}
@@ -168,7 +167,7 @@ const Contact = ()=>{
                                     {errors.email && <p className="p-0.5 text-error">{errors.email.message}</p>}
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                                 <div className="w-full">
                                     <input {...register("company")} className="w-full" placeholder="Company"  />
                                     {errors.company && <p className="p-0.5 text-error">{errors.company.message}</p>}
@@ -178,7 +177,7 @@ const Contact = ()=>{
                                     {errors.job_title && <p className="p-0.5 text-error">{errors.job_title.message}</p>}
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                                 <div className="w-full">
                                     <input {...register("country")} className="w-full" placeholder="Country"  />
                                     {errors.country && <p className="p-0.5 text-error">{errors.country.message}</p>}
@@ -196,19 +195,18 @@ const Contact = ()=>{
                                 <button className="relative w-full flex justify-center items-center" type="submit">{loading ?  <span className="spinner"></span>  :"Submit"}</button>
                             </div>
 
-                    </form>
-                </div>
-                <div className="col-span-3 md:col-span-1 ">
-                    <div className="flex flex-col justify-between gap-2  h-full">
-                        <div className="flex flex-col gap-5">
+                </form>
+                <div className="contact-info-card shadow">
+                    <div className="flex flex-col justify-between gap-2 h-full">
+                        <div className="flex flex-col gap-5 p-5 md:p-10">
                             {
                                 contactData.map((e,idx)=>(<Link to={`${e.link}`} target="_blank"  key={`contact_Info_${e.title}_${idx}`}>
-                                <div className="flex items-center gap-2 container-contact p-4">
+                                <div className="flex items-center gap-2 ">
                                     
                                     <div className="flex items-center icon">{e.icon}</div>
                                     <div className="flex w-full flex-col gap-1">
                                         <h2><strong>{e.title}</strong></h2>
-                                        <div className="w-full flex flex-col justify-center">
+                                        <div className="w-full flex flex-col justify-center value">
                                             <p>{e.value}</p> 
                                             
                                         </div>
@@ -218,8 +216,6 @@ const Contact = ()=>{
                                 </Link>))
                             }
                         </div>
-                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.041970458845!2d55.1684549253754!3d24.998689777839235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f734a5c744f37%3A0x6e047855710d82a6!2sBayan%20Building!5e0!3m2!1sen!2sae!4v1758713197362!5m2!1sen!2sae" loading="lazy"></iframe> */}
-                        
                     </div>
                 </div>
             </div>
