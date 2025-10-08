@@ -13,9 +13,9 @@ const Highlights = () => {
         const btn = document.querySelector("#highlights .swiper-button-next") as HTMLElement | null;
         btn?.click();
     }
-    return(<div id="highlights"  >
+    return(<div id="engagments"  >
         <div className="first-line text-center flex flex-col items-center pt-20">
-            <Heading title="HIGHLIGHTS" desc="" />
+            <Heading title="ENGAGMENTS" desc="" />
             <NavigationSlider lastStep={lastSlider} nextStep={nextSlider}  /> 
         </div>
         <div className="relative -mt-20 container-page">

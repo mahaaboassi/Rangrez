@@ -156,7 +156,7 @@ const Contact = ()=>{
             </div>}
             <div className="container-contact-card">
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-1 md:gap-2 p-4 md:p-8">
-                        <Heading title="Contact" desc="Get in touch with The Rangrez Network (TRN)." />
+                        <Heading title="Contact" desc="" />
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 ">
                                 <div className="w-full">
                                     <input {...register("name")} className="w-full" placeholder="Name"  />
@@ -198,7 +198,7 @@ const Contact = ()=>{
                 </form>
                 <div className="contact-info-card shadow">
                     <div className="flex flex-col justify-between gap-2 h-full">
-                        <div className="flex flex-col gap-5 p-5 md:p-10">
+                        <div className="flex flex-col gap-2 xxs:gap-5 p-5 md:p-10">
                             {
                                 contactData.map((e,idx)=>(<Link to={`${e.link}`} target="_blank"  key={`contact_Info_${e.title}_${idx}`}>
                                 <div className="flex items-center gap-2 ">
