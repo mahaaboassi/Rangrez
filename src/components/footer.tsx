@@ -45,7 +45,7 @@ const Footer = () =>{
         <div className="flex flex-col gap-1 text-center items-center md:flex-row md:justify-between ">
             <p>© 2025 The Rangrez Network (TRN). All Rights Reserved.</p>
             <div className="flex gap-1 items-center">
-                {icons.map((e,idx)=><a key={`Icon_${e.name}_${idx}`} target="_blank" href={e.link} >
+                {icons.map((e,idx)=><a aria-label={e.name} key={`Icon_${e.name}_${idx}`} target="_blank" href={e.link} >
                 <div className="icon-social" >
                     {e.icon}
                 </div>

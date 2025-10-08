@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* Logo */}
       <div className="z-50">
-        <Link to="/">{logo}</Link>
+        <Link aria-label="Home" to="/">{logo}</Link>
       </div>
 
       {/* Animated Menu */}
