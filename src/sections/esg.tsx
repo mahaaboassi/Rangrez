@@ -1,6 +1,6 @@
 // import Heading from "../components/heading"
 // import { aboutData } from "../data"
-// import shape from "../assets/images/shape.png"
+// import shape from "../assets/images/shape.webp"
 // const ESG = () => {
 //     return (<div  className="items-center flex flex-col gap-10">
 //         <Heading title="ESG COMMITMENT" desc="Environmental, Social, and Governance (ESG) principles are not an add-on at The Rangrez Network (TRN), they are embedded at the heart of our values, strategies, and services. We champion environmental sustainability by reducing our carbon footprint, promoting green technologies, and we foster diversity, equity, and inclusion while supporting employee well-being and community development through ethical, human-centered practices." />

@@ -106,7 +106,7 @@ button:hover{
 }
 /* Hero */
 .hero{
-  background: url("./assets/images/new_1.png");
+  background: url("./assets/images/new_1.webp");
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -134,7 +134,7 @@ button:hover{
 
 }
 .hero-subpage{
-  background: url("./assets/images/terms.png");
+  background: url("./assets/images/terms.webp");
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,7 +252,7 @@ nav.scroll-remove svg.logo{
 }
 /* Metrics */
 .metrics{
-  background: url("./assets/images/banner-metrics-2.png");
+  background: url("./assets/images/banner-metrics-2.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -269,7 +269,7 @@ nav.scroll-remove svg.logo{
 }
 /* About */
 #about{
-  background: url("./assets/images/banner-2.png");
+  background: url("./assets/images/banner-2.webp");
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -299,7 +299,7 @@ nav.scroll-remove svg.logo{
 
 /* Highlights */
 .first-line{
-  background: url("./assets/images/banner-3.png");
+  background: url("./assets/images/banner-3.webp");
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -313,7 +313,7 @@ nav.scroll-remove svg.logo{
   height: 55px;
 }
 .icon-container{
-  /* background: url("./assets/images/shape-2.png"); */
+  /* background: url("./assets/images/shape-2.webp"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--dark);
@@ -427,7 +427,7 @@ form button{
   transform: translateY(-50%);
   right: 0;
   width: 40%;
-  background: url("./assets/images/contact.png");
+  background: url("./assets/images/contact.webp");
   background-repeat: no-repeat;
    background-position:-30px 0px;
   background-size: cover;
@@ -553,7 +553,7 @@ form button{
 }
 @media (max-width:900px) {
   .hero{
-    background: url("./assets/images/chees_2.png");
+    background: url("./assets/images/chees_2.webp");
     /* height: 600px; */
   }
   .hero-subpage{
@@ -625,7 +625,7 @@ form button{
     height: 40px;
   }
   .contact-info-card{
-      background: url("./assets/images/contact_small.png");
+      background: url("./assets/images/contact_small.webp");
       background-size: cover;
   }
 
@@ -647,7 +647,7 @@ form button{
 }
 @media (max-width:500px) {
   .hero{
-    background: url("./assets/images/chess_4.png");
+    background: url("./assets/images/chess_4.webp");
     height: 600px;
     background-repeat: no-repeat;
   }
@@ -701,7 +701,7 @@ form button{
     font-size: var(--font-size-xs);
   }
   .first-line{
-    background: url("./assets/images/hand.png");
+    background: url("./assets/images/hand.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -1,5 +1,5 @@
 import { termsAndConsitionData } from "../../data";
-import shape from "../../assets/images/shape.png";
+import shape from "../../assets/images/shape.webp";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 

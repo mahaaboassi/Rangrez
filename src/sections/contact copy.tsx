@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.webp"
 // for validation
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';

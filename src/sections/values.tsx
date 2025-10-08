@@ -1,6 +1,6 @@
 // import Heading from "../components/heading"
 // import { aboutData } from "../data"
-// import shape from "../assets/images/shape.png"
+// import shape from "../assets/images/shape.webp"
 // const Values = () => {
 //     return (<div  className="items-center flex flex-col gap-10">
 //         <Heading title="Values" desc="Success at The Rangrez Network (TRN) is driven by a set of unwavering core values that guide our approach to business, client relationships, and industry impact. Our governance framework ensures transparency, integrity, and compliance across all operations, with a strong focus on responsible AI and technology use." />

@@ -1,6 +1,6 @@
 // import Heading from "../components/heading"
 // import { aboutData } from "../data"
-// import shape from "../assets/images/shape.png"
+// import shape from "../assets/images/shape.webp"
 // const About = () => {
 //     return (<div id="about" className="container-page !py-10 items-center flex flex-col gap-10">
 //         <div className="text-center">
