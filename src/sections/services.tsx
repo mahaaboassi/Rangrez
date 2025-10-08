@@ -25,7 +25,7 @@ const Services = () => {
         slidesPerView={4}
         breakpoints={{
           200: { slidesPerView: 1 },
-          450: { slidesPerView: 2 },
+          550: { slidesPerView: 2 },
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
@@ -36,7 +36,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="card-hero dark-card card-services justify-center p-6 h-[200px]"
+              className="card-hero dark-card card-services flex justify-center items-center p-4 md:p-6 h-[200px]"
             >
               <Card description={e.description} title={e.name} icon={e.icon} />
             </motion.div>
