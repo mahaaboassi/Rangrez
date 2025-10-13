@@ -219,6 +219,45 @@ nav.scroll-remove svg.logo{
 .final-links:hover{
   text-decoration: underline;
 }
+.container-menu-lines{
+    width: fit-content;
+    height: 15px;
+    left: 4rem;
+    
+}
+nav a.active{
+    color: var(--yellow-2);
+}
+.line-menu-1, .line-menu-2, .line-menu-3{
+    background: var(--dark);
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+}
+.line-menu-1{
+    top: 0;
+}
+.line-menu-2{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.line-menu-3{
+    bottom:  0;
+}
+.close-icon-menu .line-menu-1{
+    top: 50%;
+    transform: rotate(45deg);
+}
+.close-icon-menu .line-menu-2{
+    opacity: 0;
+}
+.close-icon-menu .line-menu-3{
+    bottom: auto;
+    top: 50%;
+    transform: rotate(-45deg);
+}
 /* Services */
 #services{
   position: relative;
@@ -566,7 +605,7 @@ form button{
   .container-page{
     padding: 0 3rem;
   }
-  .menu-button,.menu-content{
+  .menu-button,.menu-content,.container-menu-lines{
     left: 3rem;
   }
   .heading h2{
@@ -655,7 +694,7 @@ form button{
   .container-page{
     padding: 0 2rem;
   }
-  .menu-button,.menu-content{
+  .menu-button,.menu-content,.container-menu-lines{
     left: 2rem;
   }
   nav svg.logo{
@@ -716,7 +755,7 @@ form button{
   .container-page{
     padding: 0 1rem;
   }
-  .menu-button,.menu-content{
+  .menu-button,.menu-content,.container-menu-lines{
     left: 1rem;
   }
   .content-hero h1{

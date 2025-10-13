@@ -82,10 +82,17 @@ const Navbar = () => {
     >
       {/* Menu Button */}
       <div
-        className="menu-button p-2 fixed cursor-pointer top-10 z-50"
+        className={`p-2 fixed cursor-pointer top-10 z-50 container-menu-lines px-3 ${menuOpen?"close-icon-menu":""}`}
         onClick={toggleMenu}
+        onMouseEnter={() => setMenuOpen(true)}
+        onMouseLeave={(e) => {
+          // only close if not hovering over menu itself
+          if (!menuRef.current?.contains(e.relatedTarget as Node)) setMenuOpen(false);
+        }}
       >
-        <img className="w-16" src={menu} alt="Menu" />
+        <div className="line-menu-1"></div>
+        <div className="line-menu-2"></div>
+        <div className="line-menu-3"></div>
       </div>
 
       {/* Logo */}
@@ -97,18 +104,21 @@ const Navbar = () => {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="absolute top-26 menu-content right-0 bg-white z-60 w-[200px] sm:w-[250px] p-5 flex flex-col gap-4 shadow-lg rounded-xl origin-top-right"
+            className="absolute top-16 menu-content right-0 bg-white z-60 w-[200px] sm:w-[250px] p-5 flex flex-col gap-4 shadow-lg rounded-xl origin-top-right"
             variants={menuVariants}
              ref={menuRef}
             initial="hidden"
             animate="visible"
             exit="exit"
+            onMouseLeave={() => setMenuOpen(false)} 
+            onMouseEnter={() => setMenuOpen(true)} 
           >
             <ul className="flex flex-col gap-4 text-sm font-semibold">
+              <li className="cursor-pointer" onClick={() => handleScrollTo("#hero")}>Home</li>
               <li className="cursor-pointer" onClick={() => handleScrollTo("#about")}>About</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#engagments")}>Engagments</li>
               <li className="cursor-pointer" onClick={() => handleScrollTo("#services")}>Services</li>
               <li className="cursor-pointer" onClick={() => handleScrollTo("#industries")}>Industries</li>
+              <li className="cursor-pointer" onClick={() => handleScrollTo("#engagments")}>Engagments</li>
               <li className="cursor-pointer" onClick={() => handleScrollTo("#contact")}>Contact</li>
             </ul>
 
