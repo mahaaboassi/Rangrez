@@ -84,10 +84,9 @@ const Navbar = () => {
         className={`p-2 fixed cursor-pointer top-10 z-50 container-menu-lines px-3 ${menuOpen?"close-icon-menu":""}`}
         onClick={toggleMenu}
         onMouseEnter={() => setMenuOpen(true)}
-        onMouseLeave={(e) => {
-          // only close if not hovering over menu itself
-          if (!menuRef.current?.contains(e.relatedTarget as Node)) setMenuOpen(false);
-        }}
+        // onMouseLeave={(e) => {
+        //   if (!menuRef.current?.contains(e.relatedTarget as Node)) setMenuOpen(false);
+        // }}
       >
         <div className="line-menu-1"></div>
         <div className="line-menu-2"></div>
