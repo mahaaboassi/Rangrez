@@ -3,7 +3,6 @@ import { logo } from "../data";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import menu from "../assets/images/puzzle_border.webp";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState<any | boolean>(null);
