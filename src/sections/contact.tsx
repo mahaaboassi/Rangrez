@@ -144,14 +144,16 @@ const Contact = ()=>{
     return(<div  id="contact" className="flex flex-col gap-7 md:gap-10 lg:gap-20 container-page">
 
             {openPopup.isOpen && <div className="pop-up p-12">
-                <div className="flex justify-center  ">
-                    <img className="w-42" src={logo} alt="logo" />
-                </div>
-                <div className="py-4">
-                    {openPopup.message}
-                </div>
-                <div className="flex justify-center">
-                    <button onClick={reset}>Close</button>
+                <div className=" bg-white p-4 rounded-xl">
+                    <div className="flex justify-center  ">
+                        <img className="w-30 md:w-42" src={logo} alt="logo" />
+                    </div>
+                    <div className="py-4 text-sm md:text-lg text-center">
+                        {openPopup.message}
+                    </div>
+                    <div className="flex justify-center">
+                        <button className="!text-md" onClick={reset}>Close</button>
+                    </div>
                 </div>
             </div>}
             <div className="container-contact-card">

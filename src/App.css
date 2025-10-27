@@ -491,6 +491,20 @@ form button{
   justify-content: center;
   align-items: center;
 }
+/* Popup */
+.pop-up{
+    position: fixed;
+    background: var(--light);
+    inset: 0;
+    background-color: rgba(88, 87, 87, 0.148);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width:1280px) {
     .content-hero h1{
     font-size: 3rem;
