@@ -97,7 +97,7 @@ const Contact = ()=>{
 
 
 
-        const res = await fetch("https://api.arizglobal.com/api/mail", {
+        const res = await fetch("https://api.arizglobal.com/api/mail/trn", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(temp),
