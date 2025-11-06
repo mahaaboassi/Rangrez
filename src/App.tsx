@@ -4,6 +4,7 @@ import Layout from './pages/layout'
 import Home from './pages/home/page'
 import Validation from './pages/validation/page'
 import Terms from './pages/termsAndConditions/page'
+import Page_404 from './pages/404/page'
 
 function App() {
   return (<BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="validation" element={<Validation/>}/>
         <Route path="terms-and-conditions" element={<Terms/>}/>
+        <Route path='*' element={<Page_404/>} />
       </Route>
     </Routes>
   </BrowserRouter>
