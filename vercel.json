@@ -3,7 +3,7 @@
     { "source": "/(.*)", "destination": "/" }
   ],
   "redirects": [
-    { "source": "/solutions-1", "destination": "/industries", "permanent": true },
+    { "source": "/solutions-1", "destination": "/", "permanent": true },
     { "source": "/terms", "destination": "/terms-and-conditions", "permanent": true }
   ]
 }
