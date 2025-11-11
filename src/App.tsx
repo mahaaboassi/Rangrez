@@ -13,13 +13,11 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path='services' element={<Home/>} />
         <Route path='industries' element={<Home/>} />
-        <Route path='solutions-1' element={<Home/>} />
         <Route path='engagments' element={<Home/>} />
         <Route path='about' element={<Home/>} />
 
         <Route path="validation" element={<Validation/>}/>
         <Route path="terms-and-conditions" element={<Terms/>}/>
-        <Route path="terms" element={<Terms/>}/>
         <Route path='*' element={<Page_404/>} />
       </Route>
     </Routes>

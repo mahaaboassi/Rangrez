@@ -1,5 +1,9 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
+  ],
+  "redirects": [
+    { "source": "/solutions-1", "destination": "/industries", "permanent": true },
+    { "source": "/terms", "destination": "/terms-and-conditions", "permanent": true }
   ]
 }
