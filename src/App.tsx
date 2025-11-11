@@ -15,7 +15,7 @@ function App() {
         <Route path='industries' element={<Home/>} />
         <Route path='engagments' element={<Home/>} />
         <Route path='about' element={<Home/>} />
-
+        <Route path='contact' element={<Home/>} />
         <Route path="validation" element={<Validation/>}/>
         <Route path="terms-and-conditions" element={<Terms/>}/>
         <Route path='*' element={<Page_404/>} />
