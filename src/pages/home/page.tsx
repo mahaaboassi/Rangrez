@@ -15,8 +15,6 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log("location.state", location.state);
-    console.log("location.pathname", location.pathname);
     let id = "";
     if(location.state?.scrollTo){
       id = location.state.scrollTo
