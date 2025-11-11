@@ -23,7 +23,7 @@ const Home = () => {
       console.log(newPathToScroll);
       id = `#${newPathToScroll[1]}`
     }
-    const element = document.querySelector(id);
+    const element = id ? document.querySelector(id) : "";
     if (element) {
       setTimeout(() => {
         const yOffset = -150;
