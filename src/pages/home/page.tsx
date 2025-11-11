@@ -33,7 +33,9 @@ const Home = () => {
     }
   }, [location]);
 
-  return <div className='flex flex-col gap-5 md:gap-10'>
+  return <article className='flex flex-col gap-5 md:gap-10'>
+      <link rel="canonical" href="https://rangrez.net/"/>
+      <title>TRN | Future Ready Growth Advisory</title>
       {/* Hero Section */}
       <Hero/>
       <div className='container-page flex flex-col gap-10'>
@@ -52,7 +54,7 @@ const Home = () => {
       </div>
       <Highlights/>
       <Contact/>
-    </div>
+    </article>
 ;
 }      
 export default Home;

@@ -9,7 +9,10 @@ const Validation = () => {
   useEffect(()=>{
     window.scrollTo({top:0, behavior:"smooth"});
   },[])
-  return <div className="flex flex-col gap-5 md:gap-10 overflow-hidden">
+  return <article className="flex flex-col gap-5 md:gap-10 overflow-hidden">
+    <link rel="canonical" href="https://rangrez.net/validation"/>
+    <title>Validation | TRN </title>
+    
     <div className="hero-subpage flex items-center justify-center ">
       <motion.div
         className="content-hero flex flex-col gap-4 text-center"
@@ -69,6 +72,6 @@ const Validation = () => {
       </div>
     </div>
     
-  </div>;
+  </article>;
 }      
 export default Validation;
