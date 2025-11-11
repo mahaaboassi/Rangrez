@@ -8,6 +8,38 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.rangrez.net/services</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.rangrez.net/industries</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.rangrez.net/solutions-1</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.rangrez.net/engagments</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.rangrez.net/about</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+    
+
+  <url>
     <loc>https://www.rangrez.net/validation</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -16,6 +48,12 @@
   <url>
     <loc>https://www.rangrez.net/terms-and-conditions</loc>
     <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rangrez.net/terms</loc>
+    <lastmod>2025-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

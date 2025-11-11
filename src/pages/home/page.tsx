@@ -15,18 +15,26 @@ const Home = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state?.scrollTo) {
-      const id = location.state.scrollTo;
-      const element = document.querySelector(id);
-      if (element) {
-        setTimeout(() => {
-          const yOffset = -150;
-          const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }, 200); 
-      }
+    console.log("location.state", location.state);
+    console.log("location.pathname", location.pathname);
+    let id = "";
+    if(location.state?.scrollTo){
+      id = location.state.scrollTo
+    }else if(location.pathname != "/"){
+      const newPathToScroll = location.pathname.split("/")
+      console.log(newPathToScroll);
+      id = `#${newPathToScroll[1]}`
+    }
+    const element = document.querySelector(id);
+    if (element) {
+      setTimeout(() => {
+        const yOffset = -150;
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }, 200); 
     }
   }, [location]);
+
   return <div className='flex flex-col gap-5 md:gap-10'>
       {/* Hero Section */}
       <Hero/>
