@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { logo } from "../data";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState<any | boolean>(null);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const location = useLocation();
   const navigate = useNavigate();
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -34,23 +33,15 @@ const Navbar = () => {
   }, [menuOpen]);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-  const scrollToSection = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) {
-      const yOffset = -150;
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
+  // const scrollToSection = (id: string) => {
+  //   const element = document.querySelector(id);
+  //   if (element) {
+  //     const yOffset = -150;
+  //     const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+  //     window.scrollTo({ top: y, behavior: "smooth" });
+  //   }
+  // };
 
-  const handleScrollTo = (id: string) => {
-    setMenuOpen(false);
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: id } });
-    } else {
-      scrollToSection(id);
-    }
-  };
 
   // Animation variants for the menu
   const menuVariants : Variants = {
@@ -112,12 +103,12 @@ const Navbar = () => {
             onMouseEnter={() => setMenuOpen(true)} 
           >
             <ul className="flex flex-col gap-4 text-sm font-semibold">
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#hero")}>Home</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#about")}>About</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#services")}>Services</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#industries")}>Industries</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#engagments")}>Engagments</li>
-              <li className="cursor-pointer" onClick={() => handleScrollTo("#contact")}>Contact</li>
+              <li className="cursor-pointer" onClick={() => navigate("/")}>Home</li>
+              <li className="cursor-pointer" onClick={() => navigate("/about")}>About</li>
+              <li className="cursor-pointer" onClick={() => navigate("/services")}>Services</li>
+              <li className="cursor-pointer" onClick={() => navigate("/industries")}>Industries</li>
+              <li className="cursor-pointer" onClick={() => navigate("/engagments")}>Engagments</li>
+              <li className="cursor-pointer" onClick={() => navigate("/contact")}>Contact</li>
             </ul>
 
             <hr />

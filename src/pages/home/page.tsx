@@ -22,6 +22,8 @@ const Home = () => {
       const newPathToScroll = location.pathname.split("/")
       console.log(newPathToScroll);
       id = `#${newPathToScroll[1]}`
+    }else if(location.pathname == "/"){
+      id = `#hero`
     }
     const element = id ? document.querySelector(id) : "";
     if (element) {

@@ -5,7 +5,9 @@ import Navbar from "../components/navbar";
 const Layout = () => {
   return <div>
     <Navbar/>
-    <Outlet/>
+    <main>
+      <Outlet/>
+    </main>
     <Footer/>
   </div>;
 }   
