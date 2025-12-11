@@ -3619,7 +3619,7 @@ export const contactData = [
     </clipPath>
     </defs>
     </svg>, 
-    link: "https://maps.app.goo.gl/7WU1vocs2tf2jFpQ6",
+    link: "https://maps.app.goo.gl/qZBw8WeCaqjW9FuAA",
     name: "Location",
     title: "Visit Us",
     value: "609, Bayan Building, Dubai Investment Park PO Box 74700, Dubai, United Arab Emirates"
