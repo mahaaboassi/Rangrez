@@ -3743,7 +3743,7 @@ export const validationData = {
 
 export const termsAndConsitionData = {
   title: "TERMS AND CONDITIONS",
-  lastUpdated: "03-March-2025",
+  lastUpdated: "03-March-2026",
   finalDes: "By using TRN’s digital products, services, or platform, you agree to comply with the terms outlined below. These Terms and Conditions are intended to protect both our users and our intellectual assets. Please read them carefully.",
   children: [
     {
